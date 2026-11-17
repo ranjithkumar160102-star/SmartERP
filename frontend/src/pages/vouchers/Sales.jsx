@@ -69,7 +69,7 @@ function Sales() {
  const handleDownloadPDF = async (id) => {
   try {
     window.open(
-      `http://localhost:5000/api/pdf/sale/${id}`,
+      `${import.meta.env.VITE_API_URL || "http://localhost:5000/api"}/pdf/sale/${id}`,
       "_blank"
     );
   } catch (error) {
